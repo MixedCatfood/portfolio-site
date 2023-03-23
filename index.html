@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="typingAnimation()">
+        <header>  
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <ul id="menu">
+                  <li><a href="#">About Me</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Github</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+               </div>
+              </nav>
+        </header>
+        <div id="snap-scroll">
+            <div id="greeting" class="scroll-child">
+                <div id="greetingChild1">
+                    <div id="typed1">
+                        <span class="tags">&#60</span>
+                        <span class="tagType">h1</span>
+                        <span class="tags">&#62</span>
+                        <span id="carsontucker">Carson Tucker</span>
+                        <span class="tags">&#60&#47</span>
+                        <span class="tagType">h1</span>
+                        <span class="tags">&#62</span>
+                    </div>
+                    <div id="typed2">
+                        <span class="tags">&#60</span>
+                        <span class="tagType">p</span>
+                        <span class="tags">&#62</span>
+                        <span>Front-end web developer</span>
+                        <span class="tags">&#60&#47</span>
+                        <span class="tagType">p</span>
+                        <span class="tags">&#62</span>
+                        <span id="blinkingLine"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="aboutme" class="scroll-child">
+                <div id="aboutmeChild1">
+                    <div id="aboutmeTitle" class="js-scroll">
+                        <h2>A Little Bit About Me:</h2>
+                    </div>
+                </div>
+                <div id="aboutmeChild2" class="js-scroll">
+                    <p>
+                        My name is Carson Tucker; I am a self-taught front-end web developer based in Lakeland, Florida.
+                            I like to dream big but that doesn't stop me from catching the details. I'm always striving to improve my craft.
+                            I'm currently searching for the opportunity to join a team of talented developers to work with and learn from.
+                    </p>
+                </div>
+                <div id="aboutmeChild3">
+                    <div id="aboutmeChild3Header" class="js-scroll">
+                        <h3>Technologies I Work With:</h3>
+                    </div>
+                    <div id="aboutmeChild3Body">
+                        <div id="htmldiv" class="techdiv js-scroll">
+                            <div class="techName" id="htmlTitle">
+                                <p>HTML</p>
+                            </div>
+                            <div class="techBody">
+                                <img class= "techimg" id="htmlimg" src="./images/html.png">
+                            </div>
+                        </div>
+                        <div id="cssdiv" class="techdiv js-scroll">
+                            <div class="techName" id="cssTitle">
+                                <p>CSS</p>
+                            </div>
+                            <div class="techBody">
+                                <img class="techimg" id="cssimg" src="./images/css.png">
+                            </div>
+                        </div>
+                        <div id="jsdiv" class="techdiv js-scroll">
+                            <div class="techName" id="jsTitle">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="techBody">
+                                <img class="techimg" id="jsimg" src="./images/javascript.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="scroll-child">
+                <div id="projectHeader" class="js-scroll">
+                    <h2>Project Showcase:</h2>
+                </div>
+                <div id="projectGrid">
+                    <div id="projectGridLeft" class="js-scroll">
+                        <button class="slideshowButton" id="buttonLeft" onclick="plusDivs(-1)">&#60</button>
+                        <figure class="projectFigure" id="figure1">
+                            <img class="meleeImg" src="./images/meleeframedata.png">
+                        </figure>
+                        <figure class="projectFigure" id="figure2">
+                            <img class="meleeImg" src="./images/meleeframedata2.png">
+                        </figure>
+                        <button class="slideshowButton" id="buttonRight" onclick="plusDivs(1)">&#62</button>
+                    </div>
+                    <div id="projectGridRight">
+                        <div id="gridRightHeader" class="js-scroll">
+                            <h3>Melee Frame Data</h3>
+                        </div>
+                        <div id="gridRightBody" class="js-scroll">
+                            <p>Inspired by the hit party game for the Nintendo Gamecube, Melee Frame Data is a web app 
+                                designed for the user to better understand each attack and ability of the game's cast of characters.
+                            </p>
+                            <a href='https://melee.framedata.gg/' target="_blank"><button id='visitButton'>Check it out!</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="scroll-child">
+                <div id="contactMeHeader" class="js-scroll">
+                    <h2>Let's Get In Touch!</h2>
+                </div>
+                <form id="formContainer"
+                action="https://formspree.io/f/xoqzwolo"
+                method="POST">
+                    <input type="name"
+                    name="name"
+                    autocomplete="off"
+                    placeholder="Name"
+                    class="contactFormInput js-scroll">
+                    <input type="email"
+                    name="email"
+                    autocomplete="off"
+                    placeholder="Email"
+                    class="contactFormInput js-scroll">
+                    <textarea type="text"
+                    name="message"
+                    autocomplete="off"
+                    placeholder="Message"
+                    class="contactFormInput js-scroll"
+                    id="contactMessage"></textarea>
+                    <button id="contactButton" class="js-scroll"type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

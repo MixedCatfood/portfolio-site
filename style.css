@@ -1,0 +1,847 @@
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: courier, monospace;
+    background-color: rgb(31, 33, 39);
+    color: rgb(204, 204, 204);
+    margin: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#nav-bar {
+    background-color: rgb(40, 43, 51);
+    margin: 0px;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+}
+
+li {
+    float: left;
+    padding: 8px;
+    border-radius: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+li:hover {
+    background-color: rgb(50, 53, 63);
+    z-index: 1;
+}
+
+li a{
+    color: rgb(204, 204, 204);
+}
+
+ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #1E1E23;
+    height: 65px;
+  }
+  
+  
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle input
+  {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  #menuToggle span
+  {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cacaca;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #cacaca;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu
+  {
+    position: absolute;
+    width: 180px;
+    height: 400px;
+    margin: -50px 0 0 -50px;
+    padding: 45px;
+    padding-top: 125px;
+    background-color: rgb(40, 43, 51);
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #menu li
+  {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    transition-delay: 2s;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgba(95, 95, 95, 0.548);
+  }
+  
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+
+.tags {
+    color: #cacaca;
+}
+.tagType {
+    color: #00d30b;
+}
+.scroll-child {
+    text-align: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    margin: auto;
+}
+#greeting #carsontucker {
+    font-size: 1.5rem;
+}
+#greeting span {
+    font-size: 1rem;
+}
+
+#greeting {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#typed1 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+#typed2 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+#aboutme {
+    background-color: rgb(24, 26, 31);
+    min-height: 100vh;
+}
+
+#aboutmeTitle {
+    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#aboutmeChild1 span {
+    font-size: 1rem;
+}
+
+#aboutmeChild2 {
+    font-size: 1.4rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding-bottom: 50px;
+    border-color: rgba(88, 87, 87, 0.418);
+}
+
+#aboutmeGrid2 {
+    border-style: solid;
+    border-color: rgb(58, 58, 58);
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+#aboutmeChild3Header {
+    font-size: 2rem;
+}
+
+#aboutmeChild3Body {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    align-content: center;
+    padding: 30px
+}
+
+#htmldiv, #cssdiv, #jsdiv {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    text-align: center;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.techdiv {
+    justify-self: center;
+}
+#htmldiv {
+    border-color: rgb(228, 77, 38);
+}
+#htmlTitle {
+    background-color: rgb(228, 77, 38);
+    color: rgb(255, 255, 255);
+}
+
+#cssdiv {
+    border-color: rgb(33,98,175);
+}
+#cssTitle {
+    background-color: rgb(33,98,175);
+    color: rgb(255, 255, 255);
+}
+
+#jsdiv {
+    border-color: rgb(214, 190, 0);
+}
+#jsTitle {
+    background-color: rgb(214, 190, 0);
+    color: rgb(255, 255, 255);
+}
+
+.techName p {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.techBody {
+    padding: 15px;
+}
+
+.techimg {
+    height: 75px;
+}
+
+
+#aboutmeGrid1Header {
+    font-size: 1.5rem;
+    background-color: rgb(24, 26, 31);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+}
+
+#projects {
+    min-height: 100vh;
+}
+
+#projectGrid {
+    display: block;
+    grid-template-columns: 2fr 1fr;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#projectHeader {
+    font-size: 2rem;
+}
+
+#projectGridLeft {
+    display:flex;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-color: rgba(88, 87, 87, 0.418);
+    padding-bottom: 30px;
+}
+
+#projectFigure {
+    display: none;
+    border-radius: 10px;
+}
+#figure1 {
+    margin: 0px;
+}
+#figure2 {
+    margin: 0px;
+    display: none;
+}
+
+.meleeImg {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.slideshowButton {
+    max-height: 100%;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0,0,0,0);
+    color: rgb(128, 128, 128);
+}
+
+.slideshowButton:hover {
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+#buttonRight {
+    margin-right: auto;
+}
+#buttonLeft {
+    margin-left: auto;
+}
+
+.slideshowImage {
+    display: none;
+    width: 900px;
+}
+
+#gridRightHeader {
+    font-size: 2em;
+}
+
+#gridRightBody {
+    font-size: 1.5rem;
+}
+
+#contact {
+    padding: 30px;
+    background-color: rgb(24, 26, 31);
+    min-height: 100vh;
+}
+
+#contactMeHeader {
+    font-size: 2rem;
+}
+
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.contactFormInput {
+    background-color: rgba(0,0,0,0);
+    height: 5rem;
+    border: 2px solid rgba(88, 87, 87, 0.418);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(204, 204, 204);
+    font-size: 1.5rem;
+    font-weight: 400;
+} 
+
+.contactFormInput:active {
+    box-shadow: 2px 2px 5px #cacaca;
+    color:rgba(0, 0, 0, 0);
+}
+
+#contactButton {
+    background-color: rgba(0,0,0,0);
+    height: 5rem;
+    border: 2px solid rgba(88, 87, 87, 0.418);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(204, 204, 204);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#blinkingLine {
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 1rem;
+    height: 3rem;
+    border-bottom: solid;
+    animation: blink-animation 2s steps(2, start) infinite;
+    -webkit-animation: blink-animation 2s steps(2, start) infinite;
+}
+
+.js-scroll {
+    opacity: 0;
+}
+.scrolled {
+    opacity: 1;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media screen and (min-width: 1200px) {
+    
+    #nav-bar {
+        background-color: rgb(40, 43, 51);
+        margin: 0px;
+        display: flex;
+        width: 100vw;
+        position: fixed;
+        z-index: 1;
+    }
+    input[type=checkbox], label { display: none; }
+
+    li {
+        float: left;
+        padding: 8px;
+        border-radius: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    li:hover {
+        background-color: rgb(50, 53, 63);
+    }
+
+    li a{
+        color: rgb(204, 204, 204);
+    }
+
+    ul {
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .tags {
+        color: #cacaca;
+    }
+    .tagType {
+        color: #00d30b;
+    }
+    .scroll-child {
+        text-align: center;
+        justify-content: center;
+        scroll-snap-align: start;
+        margin: auto;
+    }
+    #greeting #carsontucker {
+        font-size: 6rem;
+    }
+    #greeting span {
+        font-size: 3rem;
+    }
+
+    #greeting {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #typed1 {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+    }
+    #typed2 {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    #aboutme {
+        background-color: rgb(24, 26, 31);
+        min-height: 100vh;
+    }
+
+    #aboutmeTitle {
+        font-size: 4rem;
+        padding: 30px;
+    }
+
+    #aboutmeChild1 span {
+        font-size: 3rem;
+    }
+
+    #aboutmeChild2 {
+        font-size: 2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-bottom-width: 1px;
+        border-style: solid;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        padding-bottom: 50px;
+        border-color: rgba(88, 87, 87, 0.418);
+    }
+
+    #aboutmeGrid2 {
+        border-style: solid;
+        border-color: rgb(58, 58, 58);
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    #aboutmeChild3Header {
+        font-size: 3rem;
+    }
+
+    #aboutmeChild3Body {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #htmldiv, #cssdiv, #jsdiv {
+        width: 300px;
+        text-align: center;
+        border-style: solid;
+        border-radius: 3px;
+    }
+
+    .techdiv {
+        justify-self: center;
+    }
+    #htmldiv {
+        border-color: rgb(228, 77, 38);
+    }
+
+    #htmldiv:hover {
+        box-shadow: 0 5px 15px rgba(288, 77, 38, .4);
+        background-color: rgba(288, 77, 38, .1);
+    }
+    #htmlTitle {
+        background-color: rgb(228, 77, 38);
+        color: rgb(255, 255, 255);
+    }
+
+    #cssdiv {
+        border-color: rgb(33,98,175);
+    }
+
+    #cssdiv:hover {
+        box-shadow: 0 5px 15px rgba(33, 98, 175, .4);
+        background-color: rgba(33, 98, 175, .1);
+    }
+
+    #cssTitle {
+        background-color: rgb(33,98,175);
+        color: rgb(255, 255, 255);
+    }
+
+    #jsdiv {
+        border-color: rgb(214, 190, 0);
+    }
+
+    #jsdiv:hover {
+        box-shadow: 0 5px 15px rgba(214, 190, 0, .4);
+        background-color: rgba(214, 190, 0, .1);
+    }
+
+    #jsTitle {
+        background-color: rgb(214, 190, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .techName p {
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .techBody {
+        padding: 15px;
+    }
+
+    .techimg {
+        height: 150px;
+    }
+
+    #aboutmeGrid1Header {
+        font-size: 1.5rem;
+        background-color: rgb(24, 26, 31);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 10px;
+    }
+
+    #aboutmeChild3Body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #projects {
+        min-height: 100vh;
+    }
+
+    #projectGrid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #projectHeader {
+        font-size: 4rem;
+    }
+
+    #projectGridLeft {
+        display:flex;
+        border-width: 0px;
+    }
+
+    #projectFigure {
+        display: none;
+        border-radius: 10px;
+    }
+
+    #figure2 {
+        display: none;
+    }
+
+    .meleeImg {
+        border-radius: 20px;
+        max-width: 100%;
+    }
+
+    .slideshowButton {
+        max-height: 100%;
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0,0,0,0);
+        color: rgba(128, 128, 128, 0.25);
+        font-size: 2rem;
+    }
+
+    .slideshowButton:hover {
+        background-color: rgba(0, 0, 0, 0.144);
+        color: rgb(158, 158, 158);
+    }
+
+    #buttonRight {
+        margin-right: auto;
+    }
+    #buttonLeft {
+        margin-left: auto;
+    }
+
+    .slideshowImage {
+        display: none;
+        width: 900px;
+    }
+
+    #gridRightHeader {
+        font-size: 2em;
+        border-style: solid;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-width: 0px;
+        border-bottom-width: 1px;
+        border-color: rgba(88, 87, 87, 0.418)
+    }
+
+    #gridRightBody {
+        font-size: 2rem;
+    }
+
+    #visitButton {
+        width: 200px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0);
+        color: #cacaca;
+        border-radius: 5px;
+        border-color: rgba(88, 87, 87, 0.418);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+    }
+
+    #visitButton:hover {
+        background-color: rgba(88, 87, 87, 0.418);
+    }
+
+    #contact {
+        padding: 30px;
+        background-color: rgb(24, 26, 31);
+        min-height: 100vh;
+    }
+
+    #contactMeHeader {
+        font-size: 4rem;
+    }
+
+    #formContainer {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .contactFormInput {
+        background-color: rgba(0,0,0,0);
+        height: 5rem;
+        border: 2px solid rgba(88, 87, 87, 0.418);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: rgb(204, 204, 204);
+        font-size: 1.5rem;
+        font-weight: 400;
+        
+    }
+
+    .contactFormInput:hover {
+        box-shadow:0 0 15px 4px rgba(102, 102, 102, 0.178);
+        background-color: rgba(88, 87, 87, 0.418);
+    }
+
+    #contactButton {
+        background-color: rgba(0,0,0,0);
+        height: 5rem;
+        border: 2px solid rgba(88, 87, 87, 0.418);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: rgb(204, 204, 204);
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    #contactButton:hover {
+        color: rgb(204, 204, 204);
+        background-color: rgba(88, 87, 87, 0.418);
+    }
+
+    #blinkingLine {
+        padding-bottom: 5px;
+        display: inline-block;
+        width: 2rem;
+        height: 3rem;
+        border-bottom: solid;
+        animation: blink-animation 2s steps(2, start) infinite;
+        -webkit-animation: blink-animation 2s steps(2, start) infinite;
+    }
+
+    .js-scroll {
+        opacity: 0;
+    }
+    .scrolled {
+        opacity: 1;
+        animation: fadeIn 1s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+}
+
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
