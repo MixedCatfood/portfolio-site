@@ -379,6 +379,18 @@ nav {
     font-size: 1.5rem;
 }
 
+#visitButton {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #cacaca;
+    border-radius: 5px;
+    border-color: rgba(88, 87, 87, 0.418);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+
 #contact {
     padding: 30px;
     background-color: rgb(24, 26, 31);
