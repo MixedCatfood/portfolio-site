@@ -10,7 +10,10 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 #nav-bar {
     background-color: rgb(40, 43, 51);
     margin: 0px;
@@ -341,7 +344,13 @@ nav {
     margin: 0px;
     display: none;
 }
-
+#figure3 {
+    margin: 0px;
+}
+#figure4 {
+    margin: 0px;
+    display: none;
+}
 .meleeImg {
     border-radius: 20px;
     max-width: 100%;
