@@ -1,4 +1,6 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
+const meleeImages = document.getElementsByClassName('project1Figure');
+const tipCalculatorImages = document.getElementsByClassName('project2Figure')
 
 scrollElements.forEach((el) => {
   el.style.opacity = 0
@@ -33,8 +35,8 @@ window.addEventListener('scroll', () => {
 var slideIndex = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function plusDivs(n, arr) {
+  showDivs(slideIndex += n, arr);
 }
 
 function typingAnimation() {
@@ -49,15 +51,19 @@ function typingAnimationPart2() {
   document.getElementById('typed2').style.animation = "typing 1.5s steps(20, end) forwards";
 }
 
-function showDivs(n) {
+function showDivs(n, arr) {
   var i;
-  var x = document.getElementsByClassName("projectFigure");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  if (n > arr.length) {
+    slideIndex = 1
+  };
+
+  if (n < 1) {
+    slideIndex = arr.length
+  };
+  for (i = 0; i < arr.length; i++) {
+    arr[i].style.display = "none";  
   }
-  x[slideIndex-1].style.display = "block";  
+  arr[slideIndex-1].style.display = "block";  
 }
 
 function sendEmail() {
