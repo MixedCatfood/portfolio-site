@@ -350,13 +350,17 @@ nav {
 #figure4 {
     margin: 0px;
     display: none;
-    width: 1353px;
+    width: 100%;
+    max-width: 1353px;
 }
 .meleeImg {
     border-radius: 20px;
     max-width: 100%;
 }
-
+/* .portraitImg {
+    width: 31.12%;
+    height:auto;
+} */
 .slideshowButton {
     max-height: 100%;
     width: 50px;
@@ -708,7 +712,11 @@ nav {
         border-radius: 20px;
         max-width: 100%;
     }
-
+    .portraitImg {
+        max-height: 855px;
+        width: 31.12%;
+        height:auto;
+    }
     .slideshowButton {
         max-height: 100%;
         width: 50px;
