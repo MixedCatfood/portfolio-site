@@ -713,6 +713,7 @@ nav {
         max-width: 100%;
     }
     .portraitImg {
+        max-height: 855px;
         width: 31.12%;
         height:auto;
     }
